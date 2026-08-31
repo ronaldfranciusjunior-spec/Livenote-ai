@@ -9,12 +9,9 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>LiveNote</title>
+  <title>LiveNote AI</title>
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -34,21 +31,19 @@
   >
 
 
-  <!-- NAV -->
-  <nav>
+  <!-- NAVIGATION -->
 
-    <div class="logo">
-      LiveNote
-    </div>
+  <nav>
+    <div class="logo">LiveNote</div>
 
     <div class="nav-text">
       AI Lecture Notes
     </div>
-
   </nav>
 
 
   <!-- HERO -->
+
   <section class="hero">
 
     <div class="badge">
@@ -58,14 +53,12 @@
     <h1>
       Listen.
       <br>
-      <span>
-        Remember more.
-      </span>
+      <span>Remember more.</span>
     </h1>
 
     <p>
-      Capture your lecture in real time
-      and turn it into clean,
+      Listen to your class or paste your text.
+      LiveNote turns it into clean,
       organized study notes.
     </p>
 
@@ -73,9 +66,12 @@
 
 
   <!-- MAIN -->
+
   <main>
 
-    <!-- LISTENING CARD -->
+
+    <!-- LIVE LISTENING -->
+
     <section class="record-card">
 
       <div class="glow"></div>
@@ -93,6 +89,7 @@
       >
         Ready to listen
       </div>
+
 
       <div class="buttons">
 
@@ -117,10 +114,39 @@
     </section>
 
 
+    <!-- PASTE TEXT -->
+
+    <section class="paste-card">
+
+      <div class="label">
+        PASTE TEXT
+      </div>
+
+      <h2>
+        Already have text?
+      </h2>
+
+      <p class="paste-description">
+        Paste class notes, lecture text,
+        an article, or study material.
+      </p>
+
+      <textarea
+        id="pasteInput"
+        placeholder="Paste your lecture or study text here..."
+      ></textarea>
+
+      <button id="pasteGenerateBtn">
+        ✦ Generate Notes From Text
+      </button>
+
+    </section>
+
+
     <!-- TRANSCRIPT + NOTES -->
+
     <section class="grid">
 
-      <!-- TRANSCRIPT -->
       <article class="card">
 
         <div class="label">
@@ -141,7 +167,6 @@
       </article>
 
 
-      <!-- SMART NOTES -->
       <article class="card">
 
         <div class="label">
@@ -156,7 +181,8 @@
           id="notes"
           class="content empty"
         >
-          Finish listening, then tap Generate Notes.
+          Listen or paste some text,
+          then generate your notes.
         </div>
 
       </article>
@@ -167,6 +193,7 @@
 
 
   <!-- FOOTER -->
+
   <footer>
 
     <strong>
@@ -174,7 +201,7 @@
     </strong>
 
     <div class="credit">
-      Created by Ronald Jr / theron_fr😶‍🌫️.
+      Created by Ronald Jr.
     </div>
 
   </footer>
@@ -183,4 +210,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
