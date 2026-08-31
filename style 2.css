@@ -1,0 +1,804 @@
+/* =========================
+   LIVEnote
+   BLACK GLASS + GRAFFITI
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  position: relative;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Segoe UI",
+    sans-serif;
+
+  color: #f5f5f7;
+
+  background:
+    radial-gradient(
+      circle at 50% -15%,
+      #17191d 0%,
+      #08090b 32%,
+      #000 70%
+    );
+
+  background-attachment: fixed;
+}
+
+
+/* =========================
+   GRAFFITI
+   ========================= */
+
+.graffiti {
+  position: absolute;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  opacity: 0.42;
+
+  filter:
+    grayscale(100%)
+    contrast(1.08);
+
+  mix-blend-mode: screen;
+}
+
+
+/* TOP RIGHT */
+
+.graffiti-top {
+  width: clamp(
+    150px,
+    20vw,
+    275px
+  );
+
+  top: 85px;
+
+  right: -25px;
+
+  transform:
+    rotate(2deg);
+}
+
+
+/* BOTTOM LEFT */
+
+.graffiti-bottom {
+  width: clamp(
+    150px,
+    20vw,
+    270px
+  );
+
+  bottom: 80px;
+
+  left: -25px;
+
+  transform:
+    rotate(-3deg);
+}
+
+
+/* Keep website above artwork */
+
+nav,
+.hero,
+main,
+footer {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav {
+  min-height: 64px;
+
+  padding:
+    0 6%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  background:
+    rgba(0,0,0,0.70);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,0.07);
+
+  backdrop-filter:
+    blur(30px);
+
+  -webkit-backdrop-filter:
+    blur(30px);
+}
+
+
+.logo {
+  font-size: 19px;
+
+  font-weight: 700;
+
+  letter-spacing:
+    -0.5px;
+}
+
+
+.nav-text {
+  color: #77777c;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  width:
+    min(900px, 92%);
+
+  margin:
+    0 auto;
+
+  padding:
+    90px 20px
+    60px;
+
+  text-align: center;
+}
+
+
+.badge {
+  display: inline-block;
+
+  padding:
+    8px 15px;
+
+  margin-bottom: 24px;
+
+  border-radius:
+    999px;
+
+  color: #d1d1d6;
+
+  background:
+    rgba(255,255,255,0.055);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.12);
+
+  box-shadow:
+    inset 0 1px 0
+    rgba(255,255,255,0.11);
+
+  backdrop-filter:
+    blur(25px);
+
+  -webkit-backdrop-filter:
+    blur(25px);
+}
+
+
+.hero h1 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      52px,
+      8vw,
+      86px
+    );
+
+  line-height:
+    0.96;
+
+  letter-spacing:
+    -4px;
+
+  font-weight:
+    750;
+}
+
+
+.hero h1 span {
+  color:
+    #96969b;
+}
+
+
+.hero p {
+  max-width:
+    620px;
+
+  margin:
+    28px auto 0;
+
+  color:
+    #8e8e93;
+
+  font-size:
+    18px;
+
+  line-height:
+    1.55;
+}
+
+
+/* =========================
+   MAIN
+   ========================= */
+
+main {
+  width:
+    min(1050px, 92%);
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================
+   RECORDING CARD
+   ========================= */
+
+.record-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    40px 30px;
+
+  margin-bottom:
+    24px;
+
+  text-align:
+    center;
+
+  border-radius:
+    32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.055),
+      rgba(255,255,255,0.012)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,0.09);
+
+  box-shadow:
+    inset 0 1px 0
+    rgba(255,255,255,0.08),
+
+    0 30px 80px
+    rgba(0,0,0,0.55);
+
+  backdrop-filter:
+    blur(30px);
+
+  -webkit-backdrop-filter:
+    blur(30px);
+}
+
+
+.glow {
+  position:
+    absolute;
+
+  width:
+    350px;
+
+  height:
+    220px;
+
+  top:
+    -190px;
+
+  left:
+    50%;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  filter:
+    blur(90px);
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================
+   MICROPHONE
+   ========================= */
+
+.mic {
+  width:
+    105px;
+
+  height:
+    105px;
+
+  margin:
+    0 auto 25px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    50%;
+
+  font-size:
+    38px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.025)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,0.15);
+
+  box-shadow:
+    inset 0 1px 1px
+    rgba(255,255,255,0.18),
+
+    0 18px 45px
+    rgba(0,0,0,0.55);
+
+  backdrop-filter:
+    blur(30px);
+
+  -webkit-backdrop-filter:
+    blur(30px);
+}
+
+
+.mic.active {
+  transform:
+    scale(1.05);
+
+  box-shadow:
+    0 0 0 10px
+    rgba(255,255,255,0.04),
+
+    0 18px 50px
+    rgba(0,0,0,0.60);
+}
+
+
+/* =========================
+   STATUS
+   ========================= */
+
+.status {
+  margin-bottom:
+    18px;
+
+  color:
+    #a1a1a6;
+
+  font-size:
+    14px;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.buttons {
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    7px;
+}
+
+
+button {
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  min-height:
+    49px;
+
+  padding:
+    0 23px;
+
+  border-radius:
+    999px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.16);
+
+  color:
+    #f5f5f7;
+
+  font-family:
+    inherit;
+
+  font-size:
+    14px;
+
+  font-weight:
+    650;
+
+  cursor:
+    pointer;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(38,38,42,0.78),
+      rgba(10,10,12,0.72)
+    );
+
+  box-shadow:
+    inset 0 1px 0
+    rgba(255,255,255,0.17),
+
+    0 10px 28px
+    rgba(0,0,0,0.50);
+
+  backdrop-filter:
+    blur(25px)
+    saturate(160%);
+
+  -webkit-backdrop-filter:
+    blur(25px)
+    saturate(160%);
+
+  transition:
+    0.18s ease;
+}
+
+
+/* glass reflection */
+
+button::before {
+  content: "";
+
+  position:
+    absolute;
+
+  top:
+    1px;
+
+  left:
+    12%;
+
+  width:
+    76%;
+
+  height:
+    42%;
+
+  border-radius:
+    999px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.16),
+      transparent
+    );
+
+  pointer-events:
+    none;
+}
+
+
+button:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(255,255,255,0.28);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(55,55,60,0.85),
+      rgba(15,15,17,0.80)
+    );
+}
+
+
+button:active {
+  transform:
+    scale(0.96);
+}
+
+
+/* =========================
+   TRANSCRIPT + NOTES
+   ========================= */
+
+.grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0,1fr)
+    );
+
+  gap:
+    22px;
+}
+
+
+.card {
+  min-height:
+    380px;
+
+  padding:
+    30px;
+
+  border-radius:
+    30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.045),
+      rgba(255,255,255,0.012)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,0.085);
+
+  box-shadow:
+    inset 0 1px 0
+    rgba(255,255,255,0.07),
+
+    0 25px 60px
+    rgba(0,0,0,0.40);
+
+  backdrop-filter:
+    blur(25px);
+
+  -webkit-backdrop-filter:
+    blur(25px);
+}
+
+
+.label {
+  margin-bottom:
+    8px;
+
+  color:
+    #6e6e73;
+
+  font-size:
+    11px;
+
+  font-weight:
+    750;
+
+  letter-spacing:
+    1.2px;
+}
+
+
+.card h2 {
+  margin:
+    0 0 24px;
+
+  font-size:
+    28px;
+
+  letter-spacing:
+    -1px;
+}
+
+
+.content {
+  color:
+    #c7c7cc;
+
+  font-size:
+    16px;
+
+  line-height:
+    1.7;
+
+  white-space:
+    pre-wrap;
+}
+
+
+.empty {
+  color:
+    #6e6e73;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  width:
+    min(1050px,92%);
+
+  margin:
+    55px auto 0;
+
+  padding:
+    28px 0 40px;
+
+  text-align:
+    center;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.06);
+
+  color:
+    #77777c;
+
+  font-size:
+    13px;
+}
+
+
+.credit {
+  margin-top:
+    5px;
+
+  color:
+    #55555a;
+
+  font-size:
+    12px;
+}
+
+
+/* =========================
+   TABLET / PHONE
+   ========================= */
+
+@media
+(max-width: 760px) {
+
+  .hero {
+    padding:
+      65px 15px
+      45px;
+  }
+
+
+  .hero h1 {
+    letter-spacing:
+      -2.5px;
+  }
+
+
+  .hero p {
+    font-size:
+      16px;
+  }
+
+
+  main {
+    width:
+      94%;
+  }
+
+
+  .record-card {
+    padding:
+      30px 18px;
+  }
+
+
+  .grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  button {
+    min-height:
+      47px;
+
+    padding:
+      0 18px;
+  }
+
+
+  .graffiti-top {
+    width:
+      145px;
+
+    right:
+      -38px;
+
+    top:
+      75px;
+
+    opacity:
+      0.30;
+  }
+
+
+  .graffiti-bottom {
+    width:
+      145px;
+
+    left:
+      -38px;
+
+    opacity:
+      0.28;
+  }
+
+}

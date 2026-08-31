@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>LiveNote</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+
+  <!-- TOP RIGHT GRAFFITI -->
+  <img
+    src="https://i.postimg.cc/Bn8cSCwj/IMG-1477.jpg"
+    class="graffiti graffiti-top"
+    alt=""
+  >
+
+  <!-- BOTTOM LEFT GRAFFITI -->
+  <img
+    src="https://i.postimg.cc/FHfgrxny/IMG-1476.jpg"
+    class="graffiti graffiti-bottom"
+    alt=""
+  >
+
+
+  <!-- NAV -->
+  <nav>
+
+    <div class="logo">
+      LiveNote
+    </div>
+
+    <div class="nav-text">
+      AI Lecture Notes
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="badge">
+      ✦ LiveNote AI
+    </div>
+
+    <h1>
+      Listen.
+      <br>
+      <span>
+        Remember more.
+      </span>
+    </h1>
+
+    <p>
+      Capture your lecture in real time
+      and turn it into clean,
+      organized study notes.
+    </p>
+
+  </section>
+
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- LISTENING CARD -->
+    <section class="record-card">
+
+      <div class="glow"></div>
+
+      <div
+        class="mic"
+        id="mic"
+      >
+        🎙️
+      </div>
+
+      <div
+        class="status"
+        id="status"
+      >
+        Ready to listen
+      </div>
+
+      <div class="buttons">
+
+        <button id="startBtn">
+          Start Listening
+        </button>
+
+        <button id="stopBtn">
+          Stop
+        </button>
+
+        <button id="generateBtn">
+          ✦ Generate Notes
+        </button>
+
+        <button id="clearBtn">
+          Clear
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRANSCRIPT + NOTES -->
+    <section class="grid">
+
+      <!-- TRANSCRIPT -->
+      <article class="card">
+
+        <div class="label">
+          LIVE
+        </div>
+
+        <h2>
+          Transcript
+        </h2>
+
+        <div
+          id="transcript"
+          class="content empty"
+        >
+          Your teacher's words will appear here.
+        </div>
+
+      </article>
+
+
+      <!-- SMART NOTES -->
+      <article class="card">
+
+        <div class="label">
+          LIVEnote AI
+        </div>
+
+        <h2>
+          Smart Notes
+        </h2>
+
+        <div
+          id="notes"
+          class="content empty"
+        >
+          Finish listening, then tap Generate Notes.
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <strong>
+      LiveNote
+    </strong>
+
+    <div class="credit">
+      Created by Ronald Jr / theron_fr😶‍🌫️.
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
