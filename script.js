@@ -1,4 +1,3 @@
-
 const SpeechRecognition =
   window.SpeechRecognition ||
   window.webkitSpeechRecognition;
@@ -436,9 +435,6 @@ async function generateNotes(text) {
     }
 
 
-    // =========================================
-    // FIX: PARSE MARKDOWN INTO HTML
-    // =========================================
     notesBox.innerHTML =
       marked.parse(data.text);
 
@@ -531,3 +527,4 @@ pasteGenerateBtn.onclick =
     );
 
   };
+
