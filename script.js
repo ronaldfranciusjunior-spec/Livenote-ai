@@ -435,8 +435,8 @@ async function generateNotes(text) {
     }
 
 
-    notesBox.innerHTML =
-      marked.parse(data.text);
+    notesBox.textContent =
+      data.text;
 
   }
 
