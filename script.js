@@ -527,4 +527,3 @@ pasteGenerateBtn.onclick =
     );
 
   };
-
